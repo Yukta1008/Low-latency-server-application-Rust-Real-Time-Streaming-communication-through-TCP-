@@ -48,7 +48,6 @@ On the client side, the solution incorporates the use of the `ping` command to m
 The software architecture can be visualized as a typical client-server model:
 
 ```
-![image](https://github.com/Yukta1008/Low-latency-server-application-Rust-Real-Time-Streaming-communication-through-TCP-/assets/111804217/6685a9f1-2984-420d-905d-fb7fdd04834b)
 
 
 
