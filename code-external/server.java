@@ -1,4 +1,4 @@
-package com.khalid.VideoStreaming;
+
 
 import uk.co.caprica.vlcj.player.MediaPlayerFactory;
 import uk.co.caprica.vlcj.player.headless.HeadlessMediaPlayer;
