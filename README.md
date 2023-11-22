@@ -142,11 +142,11 @@ Potential for future work
 
 POPL Aspects for Future Work
 
--Error Handling and Fault Tolerance:
+- Error Handling and Fault Tolerance:
 Enhance error handling mechanisms and implement fault tolerance strategies to ensure the server gracefully handles unexpected situations, improving system reliability.
--Performance Profiling:
+- Performance Profiling:
 Conduct detailed performance profiling to identify bottlenecks and areas for optimization. Leverage profiling tools and Rust-specific features to fine-tune critical sections of the code.
--Code Refactoring and Maintainability:
+- Code Refactoring and Maintainability:
 Consider refactoring the codebase for improved maintainability and readability. This involves adhering to Rust best practices, ensuring the long-term sustainability of the project.
--Community Collaboration:
+- Community Collaboration:
 Engage with the Rust community to gather insights, feedback, and potential contributions. This collaborative approach can lead to the adoption of best practices and the integration of community-driven improvements.
