@@ -82,21 +82,28 @@ The software architecture of the low-latency streaming server in Rust reflects a
 
 PoPL Aspects
 
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
+- async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 Ownership in Function Return: The main function returns a Result where the ownership of the result is transferred back to the caller. The Box<dyn std::error::Error> indicates a boxed trait object, allowing for various error types to be returned.
 
-let data = "This is a test message from the client";
+- let data = "This is a test message from the client";
 
 Ownership of String Literal: The ownership of the string literal is assigned to the variable data. String literals, being static, have a 'static lifetime.
 
-tokio::spawn(simulate_client());
+- tokio::spawn(simulate_client());
+  
 Concurrency with Tokio's spawn: This line spawns the asynchronous task simulate_client() concurrently. Tokio's spawn function is used for concurrent execution of asynchronous tasks.
-sleep(Duration::from_secs(1)).await;
+
+- sleep(Duration::from_secs(1)).await;
+
 Async Operation with Delay: The sleep function is used for asynchronous delay. While waiting for the delay, other tasks can continue execution concurrently.
-let server = rouille::Server::new(http_server_address, move |request| {
+
+- let server = rouille::Server::new(http_server_address, move |request| {
+  
 Closure Usage in Server: The closure provided to rouille::Server::new may be executed concurrently for each incoming request. The move keyword is used to transfer ownership of variables into the closure.
-let buffer = pipeline_clone.emit("query-video", &[]).expect("Query failed");
+
+- let buffer = pipeline_clone.emit("query-video", &[]).expect("Query failed");
+  
 Concurrent Event Handling: The emit method is used to trigger a "query-video" event on the pipeline_clone object. This operation might involve concurrent event handling within GStreamer.
 
 
